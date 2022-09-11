@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        img {
+            width: 170px;
+            height: 200px;
+        }
+        #container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            justify-content: space-between;
+            gap: 10px;
+            text-align: center;
+        }
+        #box{
+            margin: auto;
+        }
+        #banner{
+            width: 100%;
+            height: 500px;
+        }
+         /* Media Query for Mobile Devices */
+         @media (max-width: 480px) {
+            #container{
+            grid-template-columns: repeat(1,1fr);
+        }
+        #banner{
+            width: 100%;
+            height: 100%;
+            
+        }
+        }
+          
+        /* Media Query for low resolution  Tablets, Ipads */
+        @media (min-width: 481px) and (max-width: 767px) {
+            #container{
+            grid-template-columns: repeat(2,1fr);
+        }
+        #banner{
+            width: 100%;
+            height: 100%;
+            
+        }
+        }
+          #log{
+            width:40px;
+            height: 40px;
+            float: right;
+          }           
+           </style>
+</head>
+<body>
+    <a href="login.html"><img id="log" src="https://static.vecteezy.com/system/resources/thumbnails/007/407/996/small/user-icon-person-icon-client-symbol-login-head-sign-icon-design-vector.jpg" alt="" width="40px"></a>
+    <div id="slide"></div>
+    <input type="text" name="" id="query">
+    <button onclick="search()">search</button>
+    <div class="basic" style="margin:auto;display:flex;" >
+        <img style="margin:auto;" src="https://media4.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif" alt="">
+    </div>
+    
+    <div id="container"></div>
+
+    <!-- <button onclick="names()">Name IMDb</button><br><br> -->
+    <!-- <button onclick="high()">H TO L IMDb</button><br><br> -->
+   <button id="name">Filter IMDb</button>
+</body>
+</html>
+<script src="index.js"></script>
