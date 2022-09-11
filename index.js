@@ -3,7 +3,7 @@
 async function search(){
     try{
     let a =document.querySelector("#query").value    
-    let x = await fetch(`http://www.omdbapi.com/?apikey=f3d5c71f&s=${a}`)
+    let x = await fetch(`https://www.omdbapi.com/?apikey=f3d5c71f&s=${a}`)
     let y=  await x.json()
     let data = y.Search
     function store(data){
